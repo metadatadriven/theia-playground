@@ -48,4 +48,29 @@ This creates a `./basic-widget` directory with the widget. NOTE the following ou
 Please remember to add the standalone extension manually to your root package.json and to your product, e.g. in browser-app/package.json
 ```
 
-Lets do that - edit both files
+First, add `basic-widget` to the `package.json` workspaces:
+```json
+  "workspaces": [
+    "basic-widget", "empty-extension", "browser-app", "electron-app"
+  ]
+```
+
+Then edit the `browser-app/package.json` file as a "dependencies":
+```json
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/editor": "latest",
+    "@theia/filesystem": "latest",
+    "@theia/markers": "latest",
+    "@theia/messages": "latest",
+    "@theia/monaco": "latest",
+    "@theia/navigator": "latest",
+    "@theia/preferences": "latest",
+    "@theia/process": "latest",
+    "@theia/terminal": "latest",
+    "@theia/workspace": "latest",
+    "empty-extension": "0.0.0",
+    "basic-widget": "0.0.0"       <-- ADD TO LIST (dont forget comma!)
+  },
+```
+

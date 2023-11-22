@@ -17,6 +17,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "empty-extension", "browser-app", "electron-app"
+    "basic-widget", "empty-extension", "browser-app", "electron-app"
   ]
 }
