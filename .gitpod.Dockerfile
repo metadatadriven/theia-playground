@@ -8,6 +8,10 @@ RUN sudo install-packages -y build-essential
 RUN sudo install-packages -y libx11-dev libxkbfile-dev
 RUN sudo install-packages -y libsecret-1-dev
 
+# misc dependencies
+RUN	sudo apt-get install libopenblas-dev gnupg g++-multilib clangd-10 -y && \
+	sudo apt-get install xvfb l libxml2-utils -y
+
 # Use Java 17 (default in image is Java 11)
 # https://www.gitpod.io/docs/introduction/languages/java#setting-up-a-custom-dockerfile
 USER gitpod
