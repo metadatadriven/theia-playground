@@ -28,5 +28,7 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
 	sdk install java 17.0.3-ms && \
 	sdk default java 17.0.3-ms"
 
-# install Yeoman generator at v4 'cos a bug when usiong v5 df
+# install Yeoman generator at v4 'cos a bug when using v5
+# https://github.com/eclipse-theia/generator-theia-extension/issues/182
 RUN npm i yo@4.3.1 -g 
+RUN npm i generator-theia-extension -g
