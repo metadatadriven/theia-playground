@@ -12,7 +12,7 @@ Background details on the Gitpod and Theia setup are in the README of this [type
 
 The `.gitpod.Dockerfile` contains the environment needed to run [Theia](https://theia-ide.org/) in gitpod, and should be able to run [Cloud.EMF](https://eclipse.dev/emfcloud/) applications using Java backend too.
 
- # Running Theia
+# Running Theia
 
  To run The for the first time use:
  ```sh
@@ -21,4 +21,4 @@ The `.gitpod.Dockerfile` contains the environment needed to run [Theia](https://
  ```
 Then open [[localhost:3000]] 
 
-
+THIS IS THE BASE PROJECT - ALL EXPERIMENTS BRANCH FROM HERE
