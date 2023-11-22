@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+## [smalcolm] added to cover react files too
+lib
+*-app/*
+!*-app/package.json
