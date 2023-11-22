@@ -21,4 +21,31 @@ The `.gitpod.Dockerfile` contains the environment needed to run [Theia](https://
  ```
 Then open [[localhost:3000]] 
 
-THIS IS THE BASE PROJECT - ALL EXPERIMENTS BRANCH FROM HERE
+# Add a basic widget
+
+We are using the [Theia Widget Documentation](https://theia-ide.org/docs/widgets/) as a reference
+
+Add a Widget to the project using the Yeoman generator:
+```sh
+$ yo theia-extension --standalone
+? The extension's type Widget (with unit tests)
+? The extension's name basic-widget
+BasicWidget
+Please remember to add the standalone extension manually to your root package.json and to your product, e.g. in browser-app/package.json
+   create basic-widget/package.json
+   create basic-widget/tsconfig.json
+   create basic-widget/src/browser/basic-widget-frontend-module.ts
+   create basic-widget/src/browser/basic-widget-contribution.ts
+   create basic-widget/src/browser/basic-widget-widget.tsx
+   create basic-widget/src/browser/style/index.css
+   create basic-widget/README.md
+   create basic-widget/src/browser/basic-widget-widget.test.ts
+   create basic-widget/configs/jest.config.ts
+```
+
+This creates a `./basic-widget` directory with the widget. NOTE the following output:
+```
+Please remember to add the standalone extension manually to your root package.json and to your product, e.g. in browser-app/package.json
+```
+
+Lets do that - edit both files
