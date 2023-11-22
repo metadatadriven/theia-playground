@@ -74,3 +74,38 @@ Then edit the `browser-app/package.json` file as a "dependencies":
   },
 ```
 
+After updating the `package.json` files, re-run
+```sh
+$ yarn
+$ yarn build:browser
+$ yarn start
+```
+This will rebuild and start the Thiea frontend (localhost:3000)
+
+NOTE that a new menu is added `View > BasicWidget Widget`
+
+The `./basic-widget/package.json` file defines the entry point for the
+widget here:
+```json
+"theiaExtensions": [
+    {
+      "frontend": "lib/browser/basic-widget-frontend-module"
+    }
+  ]
+```
+
+The `./basic-widget/src/browser/basic-widget-frontend-module.ts` file is the Typescript file that generates the lib/browser output (see tsconfig.json)
+
+There are three key files:
+- basic-widget-frontend-module.ts
+- basic-widget-contribution.ts
+- basic-widget-widget.tsx
+
+# How to find documentation on Theia
+
+- [Links to Thiea documentation](https://github.com/eclipse-theia/theia#documentation)
+
+## Searching the source code and API
+
+Use the SEARCH feature in the [API Documentation](https://eclipse-theia.github.io/theia/docs/next/index.html)
+

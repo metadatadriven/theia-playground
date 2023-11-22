@@ -21,7 +21,7 @@ export class BasicWidgetContribution extends AbstractViewContribution<BasicWidge
         super({
             widgetId: BasicWidgetWidget.ID,
             widgetName: BasicWidgetWidget.LABEL,
-            defaultWidgetOptions: { area: 'left' },
+            defaultWidgetOptions: { area: 'right' },
             toggleCommandId: BasicWidgetCommand.id
         });
     }
@@ -46,7 +46,7 @@ export class BasicWidgetContribution extends AbstractViewContribution<BasicWidge
      */
     registerCommands(commands: CommandRegistry): void {
         commands.registerCommand(BasicWidgetCommand, {
-            execute: () => super.openView({ activate: false, reveal: true })
+            execute: () => super.openView({ activate: true, reveal: true }) // was activate false
         });
     }
 

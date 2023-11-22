@@ -8,12 +8,16 @@ import { Message } from '@theia/core/lib/browser';
 @injectable()
 export class BasicWidgetWidget extends ReactWidget {
 
+    // uniquely identify the widget, e.g. to open it via the WidgetManager.
     static readonly ID = 'basic-widget:widget';
-    static readonly LABEL = 'BasicWidget Widget';
+    // Shown in the tab when the widget is open.
+    static readonly LABEL = 'Basic Widget';
 
     @inject(MessageService)
     protected readonly messageService!: MessageService;
 
+    // Initialise the widget - this could be done inline but the
+    // generator calls a doInit function.
     @postConstruct()
     protected init(): void {
         this.doInit()
@@ -24,7 +28,7 @@ export class BasicWidgetWidget extends ReactWidget {
         this.title.label = BasicWidgetWidget.LABEL;
         this.title.caption = BasicWidgetWidget.LABEL;
         this.title.closable = true;
-        this.title.iconClass = 'fa fa-window-maximize'; // example widget icon.
+        this.title.iconClass = 'fa fa-cube'; // was fa-window-maximize. 
         this.update();
     }
 
@@ -41,6 +45,10 @@ export class BasicWidgetWidget extends ReactWidget {
         this.messageService.info('Congratulations: BasicWidget Widget Successfully Created!');
     }
 
+    // when the widget is activated this handler sets the focus to the display
+    // message button.. widgets are implemented using phosphor.js documentation
+    // for this method is here:
+    //  https://phosphorjs.github.io/phosphor/api/widgets/classes/widget.html#onactivaterequest
     protected onActivateRequest(msg: Message): void {
         super.onActivateRequest(msg);
         const htmlElement = document.getElementById('displayMessageButton');
