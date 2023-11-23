@@ -35,4 +35,4 @@ Then open [[localhost:3000]]
 
 # What next?
 
-See the [wiki]() for tutorials
+See the [wiki](https://github.com/metadatadriven/theia-playground/wiki) for tutorials
