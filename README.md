@@ -2,11 +2,17 @@
 This repo contains various experimenting related to the creation of Theia extensions. 
 Currently Each experiment is in its own branch.
 
+# How to use this repo
+
+This repo is structured using the wiki which contains tutorials on developing Thiea applications. Each tutorial has a suporting experiment branch that was used to develop the tutorial.
+
+The intention is that the reader should clone the main branch and use that as a starting point to follow the tutorials, and can use the experiment branches to refer to (hopefully!) working code.
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/metadatadriven/theia-playground.git)
 
 This repo is setup to be run in [Gitpod](https://www.gitpod.io/)
 
-Background details on the Gitpod and Theia setup are in the README of this [typescript-101 experiment](https://github.com/metadatadriven/typescript-101/tree/experiment/smalcolm/theia-blueprint)
+Background details on how to setup Gitpod to develop Theia applications are in the README of [typescript-101 experiment](https://github.com/metadatadriven/typescript-101/tree/experiment/smalcolm/theia-blueprint) repo.
 
 # Prerequisites
 
@@ -27,14 +33,6 @@ The `.gitpod.Dockerfile` contains the environment needed to run [Theia](https://
  ```
 Then open [[localhost:3000]] 
 
-# Experiment1: Create a widget
+# What next?
 
-See branch [experiment/add-basic-widget](/metadatadriven/theia-playground/tree/experiment/add-basic-widget)
-
-1. Use the Yeoman theia-extension generator to add a basic widget to Theia
-2. Run Theia and observe the new widget
-3. Edit the widget to:
-4. Change the default behaviour to being open and on the right-hand side of Theia.
-5. Add/change content of the Widget to include a static image and some text
-6. Move (and rename) the widget menu to `About > myWidget`
-
+See the [wiki]() for tutorials
