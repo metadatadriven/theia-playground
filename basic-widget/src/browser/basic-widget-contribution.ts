@@ -1,13 +1,23 @@
-import { injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@theia/core/shared/inversify';
 import { MenuModelRegistry } from '@theia/core';
 import { BasicWidgetWidget } from './basic-widget-widget';
 import { AbstractViewContribution } from '@theia/core/lib/browser';
 import { Command, CommandRegistry } from '@theia/core/lib/common/command';
 
+// additional imports needed for the FrontendApplication (see onStart)
+import { FrontendApplication } from '@theia/core/lib/browser';
+import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
+
+
 export const BasicWidgetCommand: Command = { id: 'basic-widget:command' };
 
 @injectable()
 export class BasicWidgetContribution extends AbstractViewContribution<BasicWidgetWidget> {
+
+    // use the frontend application state to open the widget on startup
+    @inject(FrontendApplicationStateService)
+    protected readonly stateService: FrontendApplicationStateService;
+
 
     /**
      * `AbstractViewContribution` handles the creation and registering
@@ -48,6 +58,18 @@ export class BasicWidgetContribution extends AbstractViewContribution<BasicWidge
         commands.registerCommand(BasicWidgetCommand, {
             execute: () => super.openView({ activate: true, reveal: true }) // was activate false
         });
+    }
+
+    /**
+     *  NEW CODE ADDED BY SM 22nov23
+     *  ----------------------------------------------------------------------
+     *  try to open the basic-widget (this widget!) when layout is initialized
+     *  This technique is borrowed from the coffee editor example IDE
+     * 
+     * To do this we need to inject a FrontendApplication
+     */
+    async onStart(app: FrontendApplication): Promise<void> {
+        this.stateService.reachedState('ready').then(a => this.openView({ reveal: true }));
     }
 
     /**

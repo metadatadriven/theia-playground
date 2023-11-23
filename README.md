@@ -109,3 +109,6 @@ There are three key files:
 
 Use the SEARCH feature in the [API Documentation](https://eclipse-theia.github.io/theia/docs/next/index.html)
 
+## Community forum
+
+The [community forum](https://community.theia-ide.org/) is useful to search and ask questions if needed
