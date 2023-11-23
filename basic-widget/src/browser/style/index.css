@@ -5,3 +5,13 @@
     padding: 10px;
     text-transform: uppercase;
 }
+
+.arctica-logo {
+    background-image: url(../static/ARCTICA_Logo_oldGlow_050.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    padding:10px;
+}

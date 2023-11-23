@@ -5,6 +5,14 @@ import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
 import { MessageService } from '@theia/core';
 import { Message } from '@theia/core/lib/browser';
 
+
+// IMPORT REPLACED WITH CSS - COULD NOT GET THE PATHS WORKING!
+
+// Import the logo from the static folder in this widget directory
+// https://create-react-app.dev/docs/adding-images-fonts-and-files/
+//import logo from './src/browser/static/ARCTICA_Logo_oldGlow_050.png'
+//const logo = require("./src/browser/static/ARCTICA_Logo_oldGlow_050.png") as string;
+
 @injectable()
 export class BasicWidgetWidget extends ReactWidget {
 
@@ -32,10 +40,13 @@ export class BasicWidgetWidget extends ReactWidget {
         this.update();
     }
 
+    // note that widget-container css is defined in style/index.css and 
+    // imported in the frontend-module
     render(): React.ReactElement {
         const header = `This is a sample widget which simply calls the messageService
         in order to display an info message to end users.`;
         return <div id='widget-container'>
+            <div className='arctica-logo' ></div>
             <AlertMessage type='INFO' header={header} />
             <button id='displayMessageButton' className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
         </div>
