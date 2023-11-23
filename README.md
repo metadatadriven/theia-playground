@@ -28,6 +28,7 @@ The `.gitpod.Dockerfile` contains the environment needed to run [Theia](https://
 
  To [run Theia for the first time](https://github.com/eclipse-theia/theia/blob/master/doc/Developing.md#quick-start) use:
  ```sh
+ $ yarn
  $ yarn build:browser
  $ yarn start:browser
  ```
