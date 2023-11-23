@@ -8,6 +8,8 @@ import { Command, CommandRegistry } from '@theia/core/lib/common/command';
 import { FrontendApplication } from '@theia/core/lib/browser';
 import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
 
+// get the common menus so we can add to the HELP menu
+import { CommonMenus } from '@theia/core/lib/browser/common-frontend-contribution';
 
 export const BasicWidgetCommand: Command = { id: 'basic-widget:command' };
 
@@ -69,7 +71,7 @@ export class BasicWidgetContribution extends AbstractViewContribution<BasicWidge
      * To do this we need to inject a FrontendApplication
      */
     async onStart(app: FrontendApplication): Promise<void> {
-        this.stateService.reachedState('ready').then(a => this.openView({ reveal: true }));
+        this.stateService.reachedState('ready').then(a => super.openView({ reveal: true }));
     }
 
     /**
@@ -87,6 +89,10 @@ export class BasicWidgetContribution extends AbstractViewContribution<BasicWidge
      * @param menus
      */
     registerMenus(menus: MenuModelRegistry): void {
-        super.registerMenus(menus);
+        //super.registerMenus(menus);
+        menus.registerMenuAction(CommonMenus.HELP, {
+            commandId: BasicWidgetCommand.id,
+            label: 'myWidget'
+        });
     }
 }
