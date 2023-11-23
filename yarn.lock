@@ -1455,6 +1455,30 @@
     uuid "^8.0.0"
     vscode-languageserver-textdocument "^1.0.1"
 
+"@theia/getting-started@latest":
+  version "1.43.1"
+  resolved "https://registry.yarnpkg.com/@theia/getting-started/-/getting-started-1.43.1.tgz#7da516f2bfede79f5e0d557dbd4fe2c437447514"
+  integrity sha512-AFAHZiNGBpak5tJxs4oIA6eOgRNXAwZw50u3OvF6VWy9ZWoQg4Siie6bMq3qJdUCTmZ7fw1jOK4skHBI8SF1Qw==
+  dependencies:
+    "@theia/core" "1.43.1"
+    "@theia/editor" "1.43.1"
+    "@theia/filesystem" "1.43.1"
+    "@theia/keymaps" "1.43.1"
+    "@theia/preview" "1.43.1"
+    "@theia/workspace" "1.43.1"
+
+"@theia/keymaps@1.43.1":
+  version "1.43.1"
+  resolved "https://registry.yarnpkg.com/@theia/keymaps/-/keymaps-1.43.1.tgz#4e675296a58627e2745444f36ca0635b7c153696"
+  integrity sha512-dyAgAjtC4tLRiml/xHuHHvYZPKMxCZvZKJcIblc5w5zkd8SaI2hZAJS3LWCcmV9mfj0crFF2joDUEAlbu8lvrg==
+  dependencies:
+    "@theia/core" "1.43.1"
+    "@theia/monaco" "1.43.1"
+    "@theia/monaco-editor-core" "1.72.3"
+    "@theia/preferences" "1.43.1"
+    "@theia/userstorage" "1.43.1"
+    jsonc-parser "^2.2.0"
+
 "@theia/localization-manager@1.43.1":
   version "1.43.1"
   resolved "https://registry.npmjs.org/@theia/localization-manager/-/localization-manager-1.43.1.tgz"
@@ -1486,6 +1510,19 @@
     "@theia/core" "1.43.1"
     react-perfect-scrollbar "^1.5.3"
     ts-md5 "^1.2.2"
+
+"@theia/mini-browser@1.43.1":
+  version "1.43.1"
+  resolved "https://registry.yarnpkg.com/@theia/mini-browser/-/mini-browser-1.43.1.tgz#3c51f9dfbce783def6977929283eb24c177e589c"
+  integrity sha512-JE8Th3gAndPBx8B8TSPQKh87tvQs9uDQ1IxHcXFBCvPXJysUw5B2Ki84koKelwpKZiykZ5yAynXIFXPY8e6FlA==
+  dependencies:
+    "@theia/core" "1.43.1"
+    "@theia/filesystem" "1.43.1"
+    "@types/mime-types" "^2.1.0"
+    mime-types "^2.1.18"
+    pdfobject "^2.0.201604172"
+    uuid "^8.0.0"
+    vhost "^3.0.2"
 
 "@theia/monaco-editor-core@1.72.3":
   version "1.72.3"
@@ -1542,7 +1579,7 @@
     "@theia/request" "1.43.1"
     semver "^7.5.4"
 
-"@theia/preferences@latest":
+"@theia/preferences@1.43.1", "@theia/preferences@latest":
   version "1.43.1"
   resolved "https://registry.npmjs.org/@theia/preferences/-/preferences-1.43.1.tgz"
   integrity sha512-50siy+4lIl4Us7pEsGHTe65+i2dy8bR0f6vfRrg0He6rQmw+DMlBQ1Java6rUG1Nds8v13oxZGgpkudaJZP0Mw==
@@ -1558,6 +1595,20 @@
     fast-deep-equal "^3.1.3"
     jsonc-parser "^2.2.0"
     p-debounce "^2.1.0"
+
+"@theia/preview@1.43.1":
+  version "1.43.1"
+  resolved "https://registry.yarnpkg.com/@theia/preview/-/preview-1.43.1.tgz#fb588d72a0286c7c1a19c1fc9015bfc6fbe5c8ec"
+  integrity sha512-KsAgTq2nVrRSB7FgCvW3puFLF4k1QeC+9IMZn5wELz/l6BPdLPMzx9YwJ+28J3/AKNw9eCU/toUGPJ7hzgr/cA==
+  dependencies:
+    "@theia/core" "1.43.1"
+    "@theia/editor" "1.43.1"
+    "@theia/mini-browser" "1.43.1"
+    "@theia/monaco" "1.43.1"
+    "@types/highlight.js" "^10.1.0"
+    "@types/markdown-it-anchor" "^4.0.1"
+    highlight.js "10.4.1"
+    markdown-it-anchor "~5.0.0"
 
 "@theia/process@1.43.1", "@theia/process@latest":
   version "1.43.1"
@@ -1739,6 +1790,13 @@
     "@types/minimatch" "^5.1.2"
     "@types/node" "*"
 
+"@types/highlight.js@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-10.1.0.tgz#89bb0c202997d7a90a07bd2ec1f7d00c56bb90b4"
+  integrity sha512-77hF2dGBsOgnvZll1vymYiNUtqJ8cJfXPD6GG/2M0aLRc29PkvB7Au6sIDjIEFcSICBhCh2+Pyq6WSRS7LUm6A==
+  dependencies:
+    highlight.js "*"
+
 "@types/http-cache-semantics@*":
   version "4.0.4"
   resolved "https://registry.npmjs.org/@types/http-cache-semantics/-/http-cache-semantics-4.0.4.tgz"
@@ -1785,6 +1843,21 @@
   resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.202.tgz"
   integrity sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==
 
+"@types/markdown-it-anchor@^4.0.1":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/markdown-it-anchor/-/markdown-it-anchor-4.0.4.tgz#f36b67608d238d15024fb6508efd7ad3990209f6"
+  integrity sha512-3CFeYzh8q7DaQboo1g+nnyXjPIvvtzoM+iBQU25sfcWVnjXckAvZIwAmPSVwHxnIblcTVcGq1XjEJjiBZFKkRA==
+  dependencies:
+    "@types/markdown-it" "*"
+
+"@types/markdown-it@*":
+  version "13.0.7"
+  resolved "https://registry.yarnpkg.com/@types/markdown-it/-/markdown-it-13.0.7.tgz#4a495115f470075bd4434a0438ac477a49c2e152"
+  integrity sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==
+  dependencies:
+    "@types/linkify-it" "*"
+    "@types/mdurl" "*"
+
 "@types/markdown-it@^12.2.3":
   version "12.2.3"
   resolved "https://registry.npmjs.org/@types/markdown-it/-/markdown-it-12.2.3.tgz"
@@ -1797,6 +1870,11 @@
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/mdurl/-/mdurl-1.0.5.tgz"
   integrity sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==
+
+"@types/mime-types@^2.1.0":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@types/mime-types/-/mime-types-2.1.4.tgz#93a1933e24fed4fb9e4adc5963a63efcbb3317a2"
+  integrity sha512-lfU4b34HOri+kAY5UheuFMWPDOI+OPceBSHZKp69gEyTL/mmJ4cnU6Y/rlme3UL3GyOn6Y42hyIEw0/q8sWx5w==
 
 "@types/mime@*":
   version "3.0.4"
@@ -4748,6 +4826,16 @@ he@1.2.0:
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+highlight.js@*:
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.9.0.tgz#04ab9ee43b52a41a047432c8103e2158a1b8b5b0"
+  integrity sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==
+
+highlight.js@10.4.1:
+  version "10.4.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.4.1.tgz#d48fbcf4a9971c4361b3f95f302747afe19dbad0"
+  integrity sha512-yR5lWvNz7c85OhVAEAeFhVCc/GV4C30Fjzc/rCP0aCWzc1UUOPUk55dK/qdwTZHBvMZo+eZ2jpk62ndX/xMFlg==
+
 hosted-git-info@^2.1.4, hosted-git-info@^2.5.0:
   version "2.8.9"
   resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.9.tgz"
@@ -5649,6 +5737,11 @@ map-obj@^2.0.0:
   resolved "https://registry.npmjs.org/map-obj/-/map-obj-2.0.0.tgz"
   integrity sha512-TzQSV2DiMYgoF5RycneKVUzIa9bQsj/B3tTgsE3dOGqlzHnGIDaC7XBE7grnA+8kZPnfqSGFe95VHc2oc0VFUQ==
 
+markdown-it-anchor@~5.0.0:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.0.2.tgz#cdd917a05b7bf92fb736a6dae3385c6d0d0fa552"
+  integrity sha512-AFM/woBI8QDJMS/9+MmsBMT5/AR+ImfOsunQZTZhzcTmna3rIzAzbOh5E0l6mlFM/i9666BpUtkqQ9bS7WApCg==
+
 markdown-it@^12.3.2:
   version "12.3.2"
   resolved "https://registry.npmjs.org/markdown-it/-/markdown-it-12.3.2.tgz"
@@ -5748,7 +5841,7 @@ mime-db@1.52.0:
   resolved "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz"
   integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
 
-mime-types@^2.1.12, mime-types@^2.1.27, mime-types@~2.1.24, mime-types@~2.1.34:
+mime-types@^2.1.12, mime-types@^2.1.18, mime-types@^2.1.27, mime-types@~2.1.24, mime-types@~2.1.34:
   version "2.1.35"
   resolved "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz"
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
@@ -6572,6 +6665,11 @@ pathval@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/pathval/-/pathval-1.1.1.tgz"
   integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
+
+pdfobject@^2.0.201604172:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/pdfobject/-/pdfobject-2.2.12.tgz#b789e4606b69763f2f3ae501ff003f3db8231943"
+  integrity sha512-D0oyD/sj8j82AMaJhoyMaY1aD5TkbpU3FbJC6w9/cpJlZRpYHqAkutXw1Ca/FKjYPZmTAu58uGIfgOEaDlbY8A==
 
 pend@~1.2.0:
   version "1.2.0"
@@ -8406,6 +8504,11 @@ vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vhost@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vhost/-/vhost-3.0.2.tgz#2fb1decd4c466aa88b0f9341af33dc1aff2478d5"
+  integrity sha512-S3pJdWrpFWrKMboRU4dLYgMrTgoPALsmYwOvyebK2M6X95b9kQrjZy5rwl3uzzpfpENe/XrNYu/2U+e7/bmT5g==
 
 vscode-jsonrpc@8.2.0:
   version "8.2.0"
