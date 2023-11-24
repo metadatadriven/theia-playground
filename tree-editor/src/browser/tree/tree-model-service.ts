@@ -9,6 +9,7 @@ import {
     dripTrayView,
     machineView,
     multiComponentView,
+    myComponentView,
     waterTankView,
 } from './tree-schema';
 
@@ -59,6 +60,8 @@ export class TreeModelService implements TreeEditor.ModelService {
                 return dripTrayView;
             case CoffeeModel.Type.WaterTank:
                 return waterTankView;
+            case CoffeeModel.Type.myComponent:
+                return myComponentView;
             default:
                 this.logger.warn("Can't find registered ui schema for type " + type);
                 return undefined;

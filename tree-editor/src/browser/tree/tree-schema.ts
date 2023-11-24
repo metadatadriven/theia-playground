@@ -230,6 +230,23 @@ export const multiComponentView = {
   ]
 };
 
+// create a view for the (new) myComponent
+export const myComponentView = {
+  'type': 'HorizontalLayout',
+  'elements': [
+    {
+      'type': 'Control',
+      'label': 'Name',
+      'scope': '#/properties/name'
+    },
+    {
+      'type': 'Control',
+      'label': 'Is the component active?',
+      'scope': '#/properties/active'
+    }
+  ]
+ }
+
 // add myComponent to the schema
 export const coffeeSchema = {
   'definitions': {
