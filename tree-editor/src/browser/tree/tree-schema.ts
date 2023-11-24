@@ -230,6 +230,7 @@ export const multiComponentView = {
   ]
 };
 
+// add myComponent to the schema
 export const coffeeSchema = {
   'definitions': {
     'machine': {
@@ -457,6 +458,28 @@ export const coffeeSchema = {
         'width',
         'height'
       ],
+      'additionalProperties': false
+    },
+    'myComponent': {
+      'title': 'MyComponent',
+      'properties': {
+        'typeId': {
+          'const': 'MyComponent'
+        },
+        'name': {
+          'type': 'string',
+          'minLength': 3,
+          'maxLength': 20
+        },
+        'active': {
+          'type': 'string',
+          'enum': [
+            'yes',
+            'no'
+          ]
+        }
+      },
+      'required': [ 'name' ],
       'additionalProperties': false
     }
   },

@@ -2,6 +2,7 @@ import { TreeEditor } from '@eclipse-emfcloud/theia-tree-editor';
 
 export namespace CoffeeModel {
     export namespace Type {
+        // these define the title property of the coffeeSchema
         export const BrewingUnit = 'BrewingUnit';
         export const ControlUnit = 'ControlUnit';
         export const Dimension = 'Dimension';
@@ -12,6 +13,7 @@ export namespace CoffeeModel {
         export const Processor = 'Processor';
         export const RAM = 'RAM';
         export const WaterTank = 'WaterTank';
+        export const myComponent = "MyComponent"
 
         export function name(type: string): string {
             return type;
@@ -23,7 +25,8 @@ export namespace CoffeeModel {
         Type.BrewingUnit,
         Type.ControlUnit,
         Type.DripTray,
-        Type.WaterTank
+        Type.WaterTank,
+        Type.myComponent
     ];
 
     /** Maps types to their creatable children */
